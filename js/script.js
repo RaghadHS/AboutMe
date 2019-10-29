@@ -3,8 +3,7 @@ var game;
 var q1, q2, q3, q4, q5;
 var names ;
 
-//asking for the name of the user for the personalized message
-names = window.prompt('Welcome !! What is your name ?');
+
 
 
 function askgame()
@@ -13,13 +12,13 @@ function askgame()
   game = game.toLowerCase();
 
   // eslint-disable-next-line eqeqeq
-  if ( game == 'no' )
+  if ( (game == 'no') || (game == 'n'))
   {
     window.prompt('Great to have you on my website,' + '  ' + names.toUpperCase()); 
   }
 
   // eslint-disable-next-line eqeqeq
-  if ( game == 'yes')
+  if ( (game == 'yes') || (game == 'y'))
   { prompting();
   }
 }
@@ -54,7 +53,7 @@ function checkAnswer(ans , num)
 { switch (num)
 {
 case 1:
-  if ( ans === 'no'){
+  if ( (ans === 'no') || (ans === 'n')){
     alert('Correct!! I grew up in Saudi Arabia');}
   else{
     alert('Incorrect!! I did not grow up in Jordan');
@@ -62,7 +61,7 @@ case 1:
   break;
 
 case 2:
-  if ( ans === 'no'){
+  if ( (ans === 'no') || (ans === 'n')){
     alert('Correct!! I like to drink coffee');}
   else{
     alert('Incorrect!! I do not like tea, I like coffee.');
@@ -70,7 +69,7 @@ case 2:
   break;
 
 case 3:
-  if ( ans === 'no'){
+  if ((ans === 'no') || (ans === 'n')){
     alert('Incorrect!! I am considered tall.');}
   else{
     alert('That is right! I am tall');
@@ -79,7 +78,7 @@ case 3:
 
 
 case 4:
-  if ( ans === 'no'){
+  if ( (ans === 'no') || (ans === 'n')){
     alert('Incorrect!! Not a dish I like to eat');}
   else{
     alert('That is right!I definetly prefer other options');
@@ -88,7 +87,7 @@ case 4:
 
 
 case 5:
-  if ( ans === 'no'){
+  if ( (ans === 'no') || (ans === 'n')){
     alert('Incorrect!! I enjoy K-POP a lot.');}
   else{
     alert('That is right! My favorite band is BTS');
@@ -111,6 +110,8 @@ function goodbye(name1)
 
 //set timer to 20 seconds
 //message to start game is shown after 7 seconds
+//asking for the name of the user for the personalized message
+names = window.prompt('Welcome !! What is your name ?');
 
 setTimeout(askgame, 7000);
 
