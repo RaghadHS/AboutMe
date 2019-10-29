@@ -1,7 +1,11 @@
 'use strict';
 var game;
 var q1, q2, q3, q4, q5;
-askgame();
+var names ;
+
+//asking for the name of the user for the personalized message
+names = window.prompt('Welcome !! What is your name ?');
+
 
 function askgame()
 {
@@ -11,7 +15,7 @@ function askgame()
   // eslint-disable-next-line eqeqeq
   if ( game == 'no' )
   {
-    window.prompt('Great to have you on my website');
+    window.prompt('Great to have you on my website,' + '  ' + names.toUpperCase()); 
   }
 
   // eslint-disable-next-line eqeqeq
@@ -42,6 +46,8 @@ function prompting()
   q5 = q5.toLowerCase(); //This answer is yes.
   checkAnswer(q5,5);
 
+  goodbye(names);
+
 }
 
 function checkAnswer(ans , num) 
@@ -51,7 +57,7 @@ case 1:
   if ( ans === 'no'){
     alert('Correct!! I grew up in Saudi Arabia');}
   else{
-    alert('Incorrect!! I did not grow up in Saudi Arabia');
+    alert('Incorrect!! I did not grow up in Jordan');
   }
   break;
 
@@ -59,15 +65,15 @@ case 2:
   if ( ans === 'no'){
     alert('Correct!! I like to drink coffee');}
   else{
-    alert('Incorrect!! I do not like tea');
+    alert('Incorrect!! I do not like tea, I like coffee.');
   }
   break;
 
 case 3:
   if ( ans === 'no'){
-    alert('Incorrect!! I am very tall.');}
+    alert('Incorrect!! I am considered tall.');}
   else{
-    alert('That is right! i am tall');
+    alert('That is right! I am tall');
   }
   break;
 
@@ -98,8 +104,14 @@ default:
 
 }
 
+function goodbye(name1)
+{
+  window.prompt('Dont be a stranger,' + '  ' + name1 + '. Visit us again for another About Me quiz!');
+}
+
 //set timer to 20 seconds
 //message to start game is shown after 7 seconds
 
-//setTimeout(askgame, 7000);
+setTimeout(askgame, 7000);
+
 
