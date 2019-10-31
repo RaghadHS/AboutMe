@@ -5,7 +5,7 @@ var names ;
 var guess;
 var count = 0 ;
 var f , flavor;
-
+var control ;
 //********************************** START OF NUMBER GUESSING FUNCTION****************************
 function startGuess()
 {
@@ -197,9 +197,16 @@ function multiCorrect ()
     for( var c = 0 ; c < 3 ; c++)
     {
       if (flavor === correctAnswer[c])
-        alert('Thats correct, I like ' + correctAnswer[c]);
+      {alert('Thats correct, I like ' + correctAnswer[c]);
+        count++;
+        control = 1;
+        break;}
     }
 
+    // eslint-disable-next-line eqeqeq
+    if( control == 1)
+    {break;
+    }
     flavor = prompt('Enter your guess again : American, Mocha, Turkish, Iced Latte, Espresso, or Iced Coffee');
   }
 
