@@ -3,6 +3,7 @@ var game;
 var q1, q2, q3, q4, q5;
 var names ;
 var guess;
+var count = 0 ;
 
 //********************************** START OF NUMBER GUESSING FUNCTION****************************
 function startGuess()
@@ -11,6 +12,7 @@ function startGuess()
   if (guess === '15')
   {
     alert('That is fantastic!!! You guessed it');
+    count++;
   }
 
   else
@@ -28,7 +30,7 @@ function startGuess()
 
   }
 
-
+  goodbye(names);
 }
 //********************************** END OF FUNCTION****************************
 
@@ -38,6 +40,7 @@ function guessNum(numb)
 {
   if (numb === '15')
   { alert('You have guessed my lucky number!! Great Job');
+    count++;
   }
 
   if (numb < '5')
@@ -59,6 +62,7 @@ function guessNum(numb)
   {
     alert('Too close, your guess is bigger than my lucky number, try again!');
   }
+  
 }
 //********************************** END OF FUNCTION****************************
 
@@ -116,8 +120,6 @@ function prompting()
   q5 = prompt('I love listening to K-POP');
   q5 = q5.toLowerCase(); //This answer is yes.
   checkAnswer(q5,5);
-
-  goodbye(names);
 }
 //********************************** END OF FUNCTION****************************
 
@@ -128,7 +130,9 @@ function checkAnswer(ans , num)
 {
 case 1:
   if ( (ans === 'no') || (ans === 'n')){
-    alert('Correct!! I grew up in Saudi Arabia');}
+    alert('Correct!! I grew up in Saudi Arabia');
+    count++;
+  }
   else{
     alert('Incorrect!! I did not grow up in Jordan');
   }
@@ -136,7 +140,9 @@ case 1:
 
 case 2:
   if ( (ans === 'no') || (ans === 'n')){
-    alert('Correct!! I like to drink coffee');}
+    alert('Correct!! I like to drink coffee');
+    count++;
+  }
   else{
     alert('Incorrect!! I do not like tea, I like coffee.');
   }
@@ -147,6 +153,7 @@ case 3:
     alert('Incorrect!! I am considered tall.');}
   else{
     alert('That is right! I am tall');
+    count++;
   }
   break;
 
@@ -156,6 +163,7 @@ case 4:
     alert('Incorrect!! Not a dish I like to eat');}
   else{
     alert('That is right!I definetly prefer other options');
+    count++;
   }
   break;
 
@@ -165,6 +173,7 @@ case 5:
     alert('Incorrect!! I enjoy K-POP a lot.');}
   else{
     alert('That is right! My favorite band is BTS');
+    count++;
   }
   break;
 
@@ -179,7 +188,7 @@ default:
 //********************************** Function for Goodbye Message****************************
 function goodbye(name1)
 {
-  prompt('Dont be a stranger,' + '  ' + name1 + '. Visit us again for another About Me quiz!');
+  prompt('Dont be a stranger,' + '  ' + name1 + '. Your score is ' + count );
 }
 //********************************** END OF FUNCTION****************************
 
