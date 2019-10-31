@@ -2,16 +2,13 @@
 var game;
 var q1, q2, q3, q4, q5;
 var names ;
-
-
-
 var guess;
 
-
+//********************************** START OF NUMBER GUESSING FUNCTION****************************
 function startGuess()
 {
   guess = prompt('Try to guess my lucky number');
-  if (guess === 15)
+  if (guess === '15')
   {
     alert('That is fantastic!!! You guessed it');
   }
@@ -19,42 +16,46 @@ function startGuess()
   else
   {
     for (var x = 0; x < 3; x++){
-      prompt('Guess again!!');
-      guessNum(guess);
       if (x === 3)
       {
-        prompt('OH NO, you were not able to guess my lucky number');
+        alert('OH NO, you were not able to guess my lucky number');
       }
+      else{
+        guess = prompt('Try to guess my lucky number again');
+        guessNum(guess);
+      }    
     }
 
   }
 
 
 }
+//********************************** END OF FUNCTION****************************
+
 
 //********************************** Function for guessing number****************************
 function guessNum(numb)
 {
-  if (numb === 15)
+  if (numb === '15')
   { alert('You have guessed my lucky number!! Great Job');
   }
 
-  if (numb < 5)
+  if (numb < '5')
   {
     alert('Too far, the number you guessed is much smaller than my lucky number. Try again!!');
   }
 
-  if (numb > 20)
+  if (numb > '20')
   {
     alert('Too far, the number you guessed is much larger than my lucky number. Try again!!');
   }
 
-  if ((numb < 15 ) && (numb > 10))
+  if ((numb < '15' ) && (numb > '10'))
   {
     alert('Too close, your guess is smaller than my lucky number, try again!');
   }
 
-  if ((numb > 15 ) && (numb < 20))
+  if ((numb > '15' ) && (numb < '20'))
   {
     alert('Too close, your guess is bigger than my lucky number, try again!');
   }
@@ -192,4 +193,4 @@ setTimeout(naming,3000);//Message asking for name is shown after 3 minutes
 setTimeout(askgame, 10000);//mMssage to start game is shown after 7 seconds
 //asking for the name of the user for the personalized message
 
-setTimeout(startGuess, 30000);
+setTimeout(startGuess, 12000);
