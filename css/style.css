@@ -5,6 +5,7 @@ body
     margin-right: 10%;
 }
 
+/*Main About Me heading*/
 #Title
 {
     color: black;
@@ -16,6 +17,7 @@ body
     margin-top: 5%;
 }
 
+/* Introductory heading */
 #p1
 {
     font-size: 100px;
@@ -27,6 +29,7 @@ body
     border-radius: 50px;
 }
 
+/* Biography heading*/
 #p2
 {
    color: black;
@@ -37,6 +40,7 @@ body
 
 }
 
+/* Styling the blocks of information*/
 .c1
 {
    float: left;
@@ -49,11 +53,10 @@ body
    text-align: center;
    clear: right;
    width: 150px;
-   margin-right: 100px;
-   margin-left: 100px;
+   margin-right: 90px;
+   margin-left: 90px;
    border-color: indianred;
    border-radius: 30px;
    border-style: groove;
-   padding: 20px;
-
+   padding: 30px;
 }
