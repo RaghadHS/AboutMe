@@ -4,6 +4,7 @@ var q1, q2, q3, q4, q5;
 var names ;
 var guess;
 var count = 0 ;
+var f , flavor;
 
 //********************************** START OF NUMBER GUESSING FUNCTION****************************
 function startGuess()
@@ -30,7 +31,7 @@ function startGuess()
 
   }
 
-  goodbye(names);
+  
 }
 //********************************** END OF FUNCTION****************************
 
@@ -185,6 +186,28 @@ default:
 //********************************** END OF FUNCTION****************************
 
 
+//********************************** Function for Multicorrect Answers****************************
+function multiCorrect ()
+{ flavor = prompt('Which of the following types of coffee I enjoy to drink the most : American,  Mocha, Turkish, Iced Latte, Espresso, or Iced Coffee');
+  var correctAnswer = ['american' , 'turkish' , 'espresso'];
+  f = flavor.toLowerCase;
+
+  for ( var t = 0 ; t < 6 ; t++)
+  {
+    for( var c = 0 ; c < 3 ; c++)
+    {
+      if (flavor === correctAnswer[c])
+        alert('Thats correct, I like ' + correctAnswer[c]);
+    }
+
+    flavor = prompt('Enter your guess again : American, Mocha, Turkish, Iced Latte, Espresso, or Iced Coffee');
+  }
+
+  goodbye(names);
+}
+//********************************** END OF FUNCTION****************************
+
+
 //********************************** Function for Goodbye Message****************************
 function goodbye(name1)
 {
@@ -203,3 +226,5 @@ setTimeout(askgame, 10000);//mMssage to start game is shown after 7 seconds
 //asking for the name of the user for the personalized message
 
 setTimeout(startGuess, 12000);
+
+setTimeout(multiCorrect, 15000);
