@@ -1,8 +1,8 @@
 body
 {
     background-color: bisque;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #Title
@@ -31,8 +31,9 @@ body
 {
    color: black;
    font-style: italic;
-   font-size: 30px;
+   font-size: 50px;
    font-weight: bold;
+   text-align: center;
 
 }
 
@@ -41,8 +42,18 @@ body
    float: left;
    color: black;
    font-style: italic;
+   font-weight: bold;
    font-size: 30px;
-   width: 40%;
+   width: 50%;
    z-index: 50%;
    text-align: center;
+   clear: right;
+   width: 150px;
+   margin-right: 100px;
+   margin-left: 100px;
+   border-color: indianred;
+   border-radius: 30px;
+   border-style: groove;
+   padding: 20px;
+
 }
