@@ -36,9 +36,14 @@ body
 
 }
 
-#p3
+.c1
 {
+   float: left;
    color: black;
    font-style: italic;
    font-size: 30px;
+   width: 40%;
+   z-index: 50%;
+   text-align: center;
+
 }

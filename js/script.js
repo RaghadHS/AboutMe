@@ -5,6 +5,11 @@ var names ;
 
 
 
+function naming()
+{
+  names = window.prompt('Welcome !! What is your name ?');
+
+}
 
 function askgame()
 {
@@ -111,8 +116,8 @@ function goodbye(name1)
 //set timer to 20 seconds
 //message to start game is shown after 7 seconds
 //asking for the name of the user for the personalized message
-names = window.prompt('Welcome !! What is your name ?');
 
-setTimeout(askgame, 7000);
+setTimeout(naming,3000);
+setTimeout(askgame, 10000);
 
 
