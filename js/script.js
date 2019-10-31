@@ -7,6 +7,31 @@ var names ;
 
 var guess;
 
+
+function startGuess()
+{
+  guess = prompt('Try to guess my lucky number');
+  if (guess === 15)
+  {
+    alert('That is fantastic!!! You guessed it');
+  }
+
+  else
+  {
+    for (var x = 0; x < 3; x++){
+      prompt('Guess again!!');
+      guessNum(guess);
+      if (x === 3)
+      {
+        prompt('OH NO, you were not able to guess my lucky number');
+      }
+    }
+
+  }
+
+
+}
+
 //********************************** Function for guessing number****************************
 function guessNum(numb)
 {
@@ -24,7 +49,7 @@ function guessNum(numb)
     alert('Too far, the number you guessed is much larger than my lucky number. Try again!!');
   }
 
-  if ((numb < 15 ) && (numb > 5))
+  if ((numb < 15 ) && (numb > 10))
   {
     alert('Too close, your guess is smaller than my lucky number, try again!');
   }
@@ -167,4 +192,4 @@ setTimeout(naming,3000);//Message asking for name is shown after 3 minutes
 setTimeout(askgame, 10000);//mMssage to start game is shown after 7 seconds
 //asking for the name of the user for the personalized message
 
-
+setTimeout(startGuess, 30000);
