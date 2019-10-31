@@ -4,6 +4,40 @@ var q1, q2, q3, q4, q5;
 var names ;
 
 
+
+var guess;
+
+//********************************** Function for guessing number****************************
+function guessNum(numb)
+{
+  if (numb === 15)
+  { alert('You have guessed my lucky number!! Great Job');
+  }
+
+  if (numb < 5)
+  {
+    alert('Too far, the number you guessed is much smaller than my lucky number. Try again!!');
+  }
+
+  if (numb > 20)
+  {
+    alert('Too far, the number you guessed is much larger than my lucky number. Try again!!');
+  }
+
+  if ((numb < 15 ) && (numb > 5))
+  {
+    alert('Too close, your guess is smaller than my lucky number, try again!');
+  }
+
+  if ((numb > 15 ) && (numb < 20))
+  {
+    alert('Too close, your guess is bigger than my lucky number, try again!');
+  }
+}
+//********************************** END OF FUNCTION****************************
+
+
+
 //********************************** Function that asks for the name of user****************************
 function naming()
 {

@@ -43,20 +43,50 @@ body
 /* Styling the blocks of information*/
 .c1
 {
-   float: left;
    color: black;
    font-style: italic;
    font-weight: bold;
-   font-size: 30px;
-   width: 50%;
-   z-index: 50%;
-   text-align: center;
-   clear: right;
-   width: 150px;
+   font-size: 40px;
+   text-align: left;
    margin-right: 90px;
    margin-left: 90px;
-   border-color: indianred;
-   border-radius: 30px;
-   border-style: groove;
    padding: 30px;
 }
+
+/*Styling of Top Ten Header*/
+.h3
+{
+   color: indianred;
+   border: 10px solid indianred;
+   font-style: italic;
+   font-size: 60px;
+   font-weight: bold;
+   text-align: center;
+   margin-left: 440px;
+   margin-right: 440px;
+   padding: 30px;
+   border-radius: 20px;
+
+}
+
+Styling of List Items
+.A2
+{
+    text-align: left;
+    font-style: italic;
+    font-size: 40px;
+    margin-left: 75px;
+    font-weight: 600;
+    text-underline-position: below;
+   
+}
+.A2 li
+{
+    font-style: italic;
+    font-size: 40px;
+    padding: 15px;
+    width: 250px;
+    margin-top: 10px;
+
+}
+
